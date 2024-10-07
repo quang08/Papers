@@ -86,7 +86,7 @@ Where:
       3. \(b'(s)\) is the updated belief state after taking action \(a\) and observing \(o\).  -->
 
  - **Task Formalization with POMPD**:
-  - In this system, each **episode** represents a single **test administration** (a moment when a student takes a test). The system doesn't rely on the student's full performance history over the school year to make decisions but instead works **dynamically** by evaluating the student's performance as the tests are taken over time. 
+  <!-- - In this system, each **episode** represents a single **test administration** (a moment when a student takes a test). The system doesn't rely on the student's full performance history over the school year to make decisions but instead works **dynamically** by evaluating the student's performance as the tests are taken over time. 
     - **Episode**: An episode happens each time a student takes a test. For example, if a student takes a test in **October**, that would be **episode 1**. If they take another in **December**, that would be **episode 2**, and so on.
       
     - **Test History**: In each episode, the student's **previous and current test scores** are collected into a **test history**. This is a collection of all the scores the student has received so far. 
@@ -109,7 +109,7 @@ Where:
     **=> The system uses this history to predict if the student will succeed by the end of the year. If the student's progress is steady, the system might decide no further tests are needed. If the scores fluctuate, the system might schedule more tests to track improvement.**
 
     - **Why This Matters:**
-    By breaking the year into episodes (test moments) and using the **history of test scores**, the system can dynamically schedule tests and make predictions about the student’s success without needing all test data at once.
+    By breaking the year into episodes (test moments) and using the **history of test scores**, the system can dynamically schedule tests and make predictions about the student’s success without needing all test data at once. -->
 
   - Within the **POMDP framework**, the system essentially performs two main tasks:
       - **Forming the Episode**:
@@ -227,5 +227,5 @@ ____
 ## Applications
 
 ### 1. **Optimization of Quiz Timing**
-   - **Test Administration Optimization**: The study’s focus on minimizing unnecessary test administrations can be adapted to optimize **when** quizzes are administered in ScoreUp. This means you could design the system to provide quizzes only when the student is likely to benefit the most, based on their learning progress.
+   - **Test Administration Optimization**: The study’s focus on minimizing unnecessary test administrations can be adapted to optimize **when** quizzes are administered. This means you could design the system to provide quizzes only when the student is likely to benefit the most, based on their learning progress.
    - **Action**: Implement an RL algorithm similar to the one in this study to dynamically schedule quizzes based on a student's previous performance, reducing over-quizzing and preventing fatigue.
